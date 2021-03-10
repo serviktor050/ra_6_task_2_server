@@ -4,10 +4,6 @@ const Router = require("koa-router");
 const cors = require("koa2-cors");
 const koaBody = require("koa-body");
 
-const port = process.env.PORT || 7777;
-const server = http.createServer(app.callback());
-server.listen(port, () => console.log("Сервер работает"));
-
 const app = new Koa();
 
 app.use(cors());
@@ -37,3 +33,7 @@ router.delete("/notes/:id", async (ctx, next) => {
 });
 
 app.use(router.routes()).use(router.allowedMethods());
+
+const port = process.env.PORT || 7777;
+const server = http.createServer(app.callback());
+server.listen(port, () => console.log("server started"));

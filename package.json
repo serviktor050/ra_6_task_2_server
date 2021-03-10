@@ -8,9 +8,6 @@
     "start": "forever server.js",
     "watch": "forever -w server.js"
   },
-  "engines": {
-    "node": "11.x"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/serviktor050/ra_6_task_2_server.git"
